@@ -24,7 +24,6 @@
     body {
       margin: 0;
       font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: black;
     }
 
     /* HEADER */
@@ -310,6 +309,40 @@
 }
 
 
+/* LABEL SEZIONE */
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: #246faf;
+  margin-bottom: 1rem;
+}
+
+/* TITOLO */
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+/* PARAGRAFO */
+.section-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 1.8rem;
+  max-width: 90%;
+}
+
+@media (min-width: 768px) {
+  .bar-restaurant-section .col-md-6,
+  .attivita-section .col-md-6 {
+    padding: 0 30px;
+  }
+}
+
+
+
 
 
 
@@ -484,6 +517,79 @@
       
         </div>
       
+      </section>
+      
+      <!-- BAR AND RESTAURANT -->
+
+      <section class="bar-restaurant-section py-5">
+        <div class="container">
+          <div class="row align-items-center mb-5">
+      
+            <!-- IMG SINISTRA -->
+            <div class="col-md-6 mb-4 mb-md-0">
+              <img 
+                src="./images/bar-restaurant.jpg"
+                srcset="./images/bar-restaurant.jpg 640w, ./images/bar-restaurant.jpg 1024w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                class="img-fluid rounded-4 shadow-sm">
+            </div>
+      
+            <!-- TESTO DESTRA -->
+            <div class="col-md-6 px-md-5">
+      
+              <p class="section-label">BAR & RESTAURANT</p>
+      
+              <h2 class="section-title">E dicter lorus<br> sinder tecte rset</h2>
+      
+              <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur. Purus eu suspendisse consequat et tincidunt 
+                tristique risus. Fames tristique ridiculus varius scelerisque a malesuada venenatis. 
+                Laoreet mollis magna blandit etiam. Elementum id velit.
+              </p>
+      
+              <button class="hero-btn mt-3">Explore</button>
+      
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+      
+      <!-- SEZIONE ATTIVITÀ (pattern inverso) -->
+      <section class="attivita-section py-5">
+        <div class="container">
+          <div class="row align-items-center">
+      
+            <!-- TESTO SINISTRA -->
+            <div class="col-md-6 order-2 order-md-1 px-md-5">
+      
+              <p class="section-label">ATTIVITÀ</p>
+      
+              <h2 class="section-title">E ritme spterm<br> linker e diter</h2>
+      
+              <p class="section-text">
+                Lorem ipsum dolor sit amet consectetur. Turpis nibh elementum feugiat et 
+                fermentum est nibh. Adipiscing sapien viverra at amet diam nullam sit 
+                fermentum. Neque est ac pharetra dui vestibulum mattis euismod. Etiam 
+                fringilla laoreet.
+              </p>
+      
+              <button class="hero-btn mt-3">Explore</button>
+      
+            </div>
+      
+            <!-- IMG DESTRA -->
+            <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+              <img 
+                src="./images/attivita.jpg"
+                srcset="./images/attivita.jpg 640w, ./images/attivita.jpg 1024w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                class="img-fluid rounded-4 shadow-sm">
+            </div>
+      
+          </div>
+        </div>
       </section>
       
       

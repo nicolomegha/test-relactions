@@ -99,6 +99,86 @@
   background: #1c5a8c;
 }
 
+/* HERO FULLSCREEN */
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* SLIDE SFONDO */
+.hero-slide {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* OVERLAY SFUMATO */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0,0,0,0.35));
+  z-index: 2;
+}
+
+/* TESTO CENTRALE */
+.hero-content {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+/* SOTTOTITOLO */
+.hero-subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+/* TITOLO */
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+/* LINEA CENTRALE */
+.hero-divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(255,255,255,0.6);
+  margin: 1.5rem 0;
+}
+
+/* BOTTONE HERO */
+.hero-btn {
+  background: #246faf;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 40px;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.hero-btn:hover {
+  background: #1d5b91;
+}
+
+
 
 
 
@@ -137,6 +217,41 @@
       
         </div>
       </header>
+
+      <!--HERO-->
+      <section id="hero" class="hero splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+      
+            <!-- SLIDE 1 -->
+            <li class="splide__slide">
+              <div class="hero-slide" style="background-image: url('./images/hero-1.jpeg');"></div>
+            </li>
+      
+            <!-- SLIDE 2 -->
+            <li class="splide__slide">
+              <div class="hero-slide" style="background-image: url('./images/hero-2.jpg');"></div>
+            </li>
+      
+            <!-- SLIDE 3 -->
+            <li class="splide__slide">
+              <div class="hero-slide" style="background-image: url('./images/hero-3.jpg');"></div>
+            </li>
+      
+          </ul>
+        </div>
+      
+        <!-- TESTO -->
+        <div class="hero-content">
+          <span class="hero-subtitle">EXCLUSIVE BEACHES</span>
+          <h1 class="hero-title">Loren Ipsum dolor este</h1>
+      
+          <div class="hero-divider"></div>
+      
+          <button class="hero-btn">Explore</button>
+        </div>
+      </section>
+      
       
 
 
@@ -144,7 +259,20 @@
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
   <script>
-    // JS 
+
+    //hero
+   document.addEventListener("DOMContentLoaded", () => {
+  new Splide('.splide', {
+    type: 'fade',
+    rewind: true,
+    autoplay: true,
+    interval: 5000,
+    speed: 1000,
+    arrows: false,
+    pagination: false
+  }).mount();
+});
+
   </script>
 </body>
 </html>

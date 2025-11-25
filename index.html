@@ -413,6 +413,75 @@
         font-size: 2.4rem;
         font-weight: 600;
       }
+
+      /* OFFERTE */
+      .offerte-title {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        font-size: 2.6rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .offerte-subtitle {
+        max-width: 650px;
+        margin: 0 auto 2rem auto;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* CARD OFFERTE */
+      .offerta-card {
+        position: relative;
+        height: 350px;
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .offerta-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* OVERLAY SCURO */
+      .offerta-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.15),
+          rgba(0, 0, 0, 0.45)
+        );
+        z-index: 1;
+      }
+
+      /* CONTENUTO CARD */
+      .offerta-content {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        text-align: center;
+        color: #fff;
+      }
+
+      .offer-badge {
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 0.75rem;
+        margin-bottom: 1rem;
+        opacity: 0.9;
+      }
+
+      .offer-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
     </style>
   </head>
   <body>
@@ -689,6 +758,78 @@
         <p class="matrimoni-label">WEDDING</p>
         <h2 class="matrimoni-title">Pacchetti Matrimoniali</h2>
         <button class="hero-btn mt-3">Explore</button>
+      </div>
+    </section>
+
+    <section id="offerte" class="offerte-section py-5">
+      <div class="container text-center mb-5">
+        <h2 class="offerte-title">Offerte</h2>
+
+        <p class="offerte-subtitle">
+          Lorem ipsum dolor sit amet consectetur. Faucibus sed neque
+          pellentesque vulputate semper tellus vitae. Mauris feugiat.
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-center g-4">
+          <!-- CARD 1 -->
+          <div class="col-md-4">
+            <div class="offerta-card">
+              <img
+                src="./images/bar-restaurant.jpg"
+                srcset="./images/bar-restaurant.jpg 640w, ./images/bar-restaurant.jpg 1024w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                class="offerta-img"
+              />
+              <div class="offerta-overlay"></div>
+
+              <div class="offerta-content">
+                <p class="offer-badge">SAVE OVER 15%</p>
+                <h3 class="offer-title">Loren Ipsum</h3>
+                <button class="hero-btn mt-2">More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="col-md-4">
+            <div class="offerta-card">
+              <img
+                src="./images/attivita.jpg"
+                srcset="./images/attivita.jpg 640w, ./images/attivita.jpg 1024w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                class="offerta-img"
+              />
+              <div class="offerta-overlay"></div>
+
+              <div class="offerta-content">
+                <p class="offer-badge">SAVE OVER 15%</p>
+                <h3 class="offer-title">Loren Ipsum</h3>
+                <button class="hero-btn mt-2">More</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="col-md-4">
+            <div class="offerta-card">
+              <img
+                src="./images/left-big.jpg"
+                srcset="./images/left-big.jpg 640w, ./images/left-big.jpg 1024w"
+                sizes="(max-width: 768px) 100vw, 33vw"
+                class="offerta-img"
+              />
+              <div class="offerta-overlay"></div>
+
+              <div class="offerta-content">
+                <p class="offer-badge">SAVE OVER 15%</p>
+                <h3 class="offer-title">Loren Ipsum</h3>
+                <button class="hero-btn mt-2">More</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -1,0 +1,538 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont,
+      sans-serif;
+  }
+
+  /* HEADER */
+  .header-lux {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Testo menu */
+  .header-lux a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    font-weight: 300;
+  }
+
+  /* LOGO CENTRALE */
+  .logo-center {
+    color: white;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    line-height: 1.3;
+  }
+
+  /* HAMBURGER MENU */
+  .hamburger {
+    width: 26px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .hamburger span {
+    height: 2px;
+    width: 100%;
+    background: white;
+    display: block;
+    border-radius: 2px;
+  }
+
+  /* LINGUA */
+  .lang {
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* BOOK BUTTON */
+  .btn-book {
+    background: #246faf;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 40px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .btn-book:hover {
+    background: #1c5a8c;
+  }
+
+  /* HERO FULLSCREEN */
+  .hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* SLIDE SFONDO */
+  .hero-slide {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* OVERLAY SFUMATO */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.35)
+    );
+    z-index: 2;
+  }
+
+  /* TESTO CENTRALE */
+  .hero-content {
+    position: absolute;
+    z-index: 3;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+  }
+
+  /* SOTTOTITOLO */
+  .hero-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-bottom: 1rem;
+  }
+
+  /* TITOLO */
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  /* LINEA CENTRALE */
+  .hero-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.6);
+    margin: 1.5rem 0;
+  }
+
+  /* BOTTONE HERO */
+  .hero-btn {
+    background: #246faf;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 40px;
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+
+  .hero-btn:hover {
+    background: #1d5b91;
+  }
+
+  /* SEZIONE LOCATION */
+  .section-location {
+    background: #ffffff;
+  }
+
+  /* IMMAGINI PICCOLE IN ALTO */
+  .location-top-left {
+    max-width: 55%;
+    margin-left: 10%;
+  }
+
+  .location-top-right {
+    max-width: 75%;
+    margin-top: 35px;
+  }
+
+  /* IMMAGINE GRANDE SINISTRA */
+  .location-big-left {
+    max-width: 85%;
+    margin-top: -20px; /* identico al mockup */
+  }
+
+  /* IMMAGINE IN BASSO A DESTRA */
+  .location-bottom-right {
+    max-width: 70%;
+    margin-top: -20px; /* identica distanza dal testo */
+  }
+
+  /* TESTI */
+  .loc-label {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+    color: #246faf;
+    margin-bottom: 1rem;
+  }
+
+  .loc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+  }
+
+  .loc-text {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.8rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* SEZIONE SPIAGGIA PRIVATA */
+  .spiaggia-privata-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* IMMAGINE FULL-WIDTH */
+  .spiaggia-privata-img-wrapper {
+    width: 100%;
+    height: 450px; /* come nel mockup */
+    overflow: hidden;
+  }
+
+  .spiaggia-privata-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* OVERLAY PER TESTO */
+  .spiaggia-privata-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  /* CONTENUTO TESTO */
+  .spiaggia-privata-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+  }
+
+  /* LABEL */
+  .spiaggia-label {
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+
+  /* MARQUEE */
+  .spiaggia-marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100vw;
+    margin: 0 auto;
+  }
+
+  .spiaggia-marquee-inner {
+    display: inline-block;
+    padding-left: 100%;
+    animation: spiaggia-marquee 18s linear infinite;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .spiaggia-marquee-inner span {
+    margin-right: 3rem;
+    color: white;
+  }
+
+  @keyframes spiaggia-marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* LABEL SEZIONE */
+  .section-label {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+    color: #246faf;
+    margin-bottom: 1rem;
+  }
+
+  /* TITOLO */
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+  }
+
+  /* PARAGRAFO */
+  .section-text {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.8rem;
+    max-width: 90%;
+  }
+
+  @media (min-width: 768px) {
+    .bar-restaurant-section .col-md-6,
+    .attivita-section .col-md-6 {
+      padding: 0 30px;
+    }
+  }
+
+  /* SEZIONE MATRIMONI (PARALLAX) */
+  .matrimoni-section {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+  }
+
+  /* wrapper immagine */
+  .matrimoni-parallax {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  /* immagine di sfondo con parallax */
+  .matrimoni-bg {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    transform: translateY(0);
+    will-change: transform;
+  }
+
+  /* overlay scuro leggero */
+  .matrimoni-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.5)
+    );
+    z-index: 1;
+  }
+
+  /* contenuto testo */
+  .matrimoni-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0 1rem;
+  }
+
+  .matrimoni-label {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+
+  .matrimoni-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+
+  /* OFFERTE */
+  .offerte-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 2.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .offerte-subtitle {
+    max-width: 650px;
+    margin: 0 auto 2rem auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* CARD OFFERTE */
+  .offerta-card {
+    position: relative;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .offerta-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* OVERLAY SCURO */
+  .offerta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.45)
+    );
+    z-index: 1;
+  }
+
+  /* CONTENUTO CARD */
+  .offerta-content {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+  }
+
+  .offer-badge {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+  }
+
+  .offer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  /* FOOTER */
+  .footer-section {
+    border-top: 1px solid #d3d7dc;
+    background: #ffffff;
+    padding-bottom: 60px;
+  }
+
+  /* Colonne */
+  .footer-column {
+    position: relative;
+    padding: 0 30px;
+  }
+
+  /* Divider verticali */
+  .footer-column:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: #d3d7dc;
+  }
+
+  /* Titoli footer */
+  .footer-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    color: #333;
+  }
+
+  /* Liste */
+  .footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-list li {
+    margin-bottom: 0.45rem;
+    font-size: 0.92rem;
+    color: #333;
+  }
+
+  /* Newsletter */
+  .newsletter-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    color: #246faf;
+    text-transform: uppercase;
+  }
+
+  .newsletter-input {
+    width: 80%;
+    padding: 6px 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #c8d3dd;
+    background: #e9f0f5;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  /* Contatti */
+  .footer-contact {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* COPYRIGHT */
+  .footer-copy,
+  .footer-made {
+    font-size: 0.75rem;
+    color: #6b6b6b;
+  }

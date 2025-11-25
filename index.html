@@ -482,6 +482,86 @@
         font-weight: 600;
         margin-bottom: 1rem;
       }
+
+      /* FOOTER */
+      .footer-section {
+        border-top: 1px solid #d3d7dc;
+        background: #ffffff;
+        padding-bottom: 60px;
+      }
+
+      /* Colonne */
+      .footer-column {
+        position: relative;
+        padding: 0 30px;
+      }
+
+      /* Divider verticali */
+      .footer-column:not(:first-child)::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background: #d3d7dc;
+      }
+
+      /* Titoli footer */
+      .footer-title {
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+        color: #333;
+      }
+
+      /* Liste */
+      .footer-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-list li {
+        margin-bottom: 0.45rem;
+        font-size: 0.92rem;
+        color: #333;
+      }
+
+      /* Newsletter */
+      .newsletter-title {
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        color: #246faf;
+        text-transform: uppercase;
+      }
+
+      .newsletter-input {
+        width: 80%;
+        padding: 6px 10px;
+        margin-top: 10px;
+        border-radius: 6px;
+        border: 1px solid #c8d3dd;
+        background: #e9f0f5;
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      /* Contatti */
+      .footer-contact {
+        font-size: 0.92rem;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* COPYRIGHT */
+      .footer-copy,
+      .footer-made {
+        font-size: 0.75rem;
+        color: #6b6b6b;
+      }
     </style>
   </head>
   <body>
@@ -778,7 +858,10 @@
             <div class="offerta-card">
               <img
                 src="./images/bar-restaurant.jpg"
-                srcset="./images/bar-restaurant.jpg 640w, ./images/bar-restaurant.jpg 1024w"
+                srcset="
+                  ./images/bar-restaurant.jpg  640w,
+                  ./images/bar-restaurant.jpg 1024w
+                "
                 sizes="(max-width: 768px) 100vw, 33vw"
                 class="offerta-img"
               />
@@ -832,6 +915,66 @@
         </div>
       </div>
     </section>
+
+    <footer class="footer-section py-5">
+      <div class="container">
+        <div class="row text-start">
+          <!-- COLONNA MENU -->
+          <div class="col-md-4 footer-column">
+            <h4 class="footer-title">MENU</h4>
+            <ul class="footer-list">
+              <li>Location</li>
+              <li>Spiaggia Excelsior</li>
+              <li>Spiaggia Quattro Fontane</li>
+              <li>Elmar</li>
+              <li>Attività</li>
+              <li>Wedding</li>
+              <li>Listini 2024</li>
+              <li>Offerte</li>
+            </ul>
+          </div>
+
+          <!-- COLONNA FOLLOW -->
+          <div class="col-md-4 footer-column text-center">
+            <h4 class="footer-title">FOLLOW</h4>
+            <ul class="footer-list">
+              <li>Instagram</li>
+              <li>Loren Ipsum</li>
+            </ul>
+
+            <p class="newsletter-title mt-4">SUBSCRIBE TO OUR NEWSLETTER</p>
+
+            <input
+              type="email"
+              placeholder="email and press enter"
+              class="newsletter-input"
+            />
+          </div>
+
+          <!-- COLONNA CONTACT -->
+          <div class="col-md-4 footer-column text-end">
+            <h4 class="footer-title">CONTACT</h4>
+            <p class="footer-contact">
+              Lorem Ipsum dolor<br />
+              Loring, Bulevard, Venezia<br />
+              T: +1 62 123 456 7890<br />
+              E: venice@loremipsum.com<br />
+              Reception: WhatsApp
+            </p>
+          </div>
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="row mt-4">
+          <div class="col-6">
+            <p class="footer-copy">© 2025 loremipsum</p>
+          </div>
+          <div class="col-6 text-end">
+            <p class="footer-made">made by relations</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Splide JS -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>

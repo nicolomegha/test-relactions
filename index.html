@@ -178,6 +178,62 @@
   background: #1d5b91;
 }
 
+/* SEZIONE LOCATION */
+.section-location {
+  background: #ffffff;
+}
+
+/* IMMAGINI PICCOLE IN ALTO */
+.location-top-left {
+    max-width: 55%;
+    margin-left: 10%;  
+}
+
+.location-top-right {
+  max-width: 75%;
+  margin-top: 35px;
+}
+
+
+/* IMMAGINE GRANDE SINISTRA */
+.location-big-left {
+  max-width: 85%;
+  margin-top: -20px; /* identico al mockup */
+}
+
+/* IMMAGINE IN BASSO A DESTRA */
+.location-bottom-right {
+  max-width: 70%;
+  margin-top: -20px; /* identica distanza dal testo */
+}
+
+/* TESTI */
+.loc-label {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: #246faf;
+  margin-bottom: 1rem;
+}
+
+.loc-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.loc-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 1.8rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 
 
 
@@ -251,6 +307,75 @@
           <button class="hero-btn">Explore</button>
         </div>
       </section>
+
+      <!-- LOCATION -->
+      <section class="py-5 section-location">
+
+        <div class="container">
+      
+          <!-- ROW 1 — IMMAGINI PICCOLE IN ALTO -->
+          <div class="row align-items-start mb-5">
+      
+            <!-- TOP LEFT -->
+            <div class="col-md-4 d-flex justify-content-center">
+                <img src="./images/top-left.jpg" class="img-fluid rounded-4 location-top-left">
+              </div>
+      
+            <!-- EMPTY CENTER (PER DISTANZA IDENTICA AL MOCKUP) -->
+            <div class="col-md-4"></div>
+      
+            <!-- TOP RIGHT -->
+            <div class="col-md-4 d-flex justify-content-end">
+              <img src="./images/top-right.jpg" class="img-fluid rounded-4 location-top-right">
+            </div>
+      
+          </div>
+      
+          <!-- ROW 2 — IMMAGINE GRANDE + TESTO + SPAZIO DESTRO -->
+          <div class="row align-items-center mb-5">
+      
+            <!-- IMG BIG LEFT -->
+            <div class="col-md-4">
+              <img src="./images/left-big.jpg" class="img-fluid rounded-4 location-big-left">
+            </div>
+      
+            <!-- TEXT CENTER -->
+            <div class="col-md-4 text-center px-4">
+      
+              <p class="loc-label">LOCATION</p>
+      
+              <h2 class="loc-title">Recta dolor<br>e sinte dexer</h2>
+      
+              <p class="loc-text">
+                Lorem ipsum dolor sit amet consectetur. Sed cras et volutpat sed tempus sed
+                semper pellentesque. Vivamus eleifend amet eu pharetra. Semper felis
+                scelerisque nulla amet nunc est molestie mauris tempor. Sit auctor dictum
+                pulvinar.
+              </p>
+      
+              <button class="hero-btn mt-2">Explore</button>
+      
+            </div>
+      
+            <!-- EMPTY RIGHT COLUMN (COME NEL MOCKUP) -->
+            <div class="col-md-4"></div>
+      
+          </div>
+      
+          <!-- ROW 3 — IMG BASSA A DESTRA -->
+          <div class="row mt-4">
+      
+            <div class="col-md-4 offset-md-6 d-flex justify-content-end">
+              <img src="./images/bottom-right.jpg" class="img-fluid rounded-4 location-bottom-right">
+            </div>
+      
+          </div>
+      
+        </div>
+      
+      </section>
+      
+      
       
       
 

@@ -1,620 +1,741 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <title>Test Relactions</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Relactions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Splide CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-  />
+    <!-- Splide CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    }
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont,
+          sans-serif;
+      }
 
-    /* HEADER */
-.header-lux {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+      /* HEADER */
+      .header-lux {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
 
-/* Testo menu */
-.header-lux a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 0.06em;
-  font-weight: 300;
-}
+      /* Testo menu */
+      .header-lux a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.9rem;
+        letter-spacing: 0.06em;
+        font-weight: 300;
+      }
 
-/* LOGO CENTRALE */
-.logo-center {
-  color: white;
-  text-align: center;
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-  font-size: 1rem;
-  letter-spacing: 0.15em;
-  line-height: 1.3;
-}
+      /* LOGO CENTRALE */
+      .logo-center {
+        color: white;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        font-size: 1rem;
+        letter-spacing: 0.15em;
+        line-height: 1.3;
+      }
 
-/* HAMBURGER MENU */
-.hamburger {
-  width: 26px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 6px;
-}
+      /* HAMBURGER MENU */
+      .hamburger {
+        width: 26px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+      }
 
-.hamburger span {
-  height: 2px;
-  width: 100%;
-  background: white;
-  display: block;
-  border-radius: 2px;
-}
+      .hamburger span {
+        height: 2px;
+        width: 100%;
+        background: white;
+        display: block;
+        border-radius: 2px;
+      }
 
-/* LINGUA */
-.lang {
-  color: white;
-  font-size: 0.9rem;
-  letter-spacing: 0.08em;
-}
+      /* LINGUA */
+      .lang {
+        color: white;
+        font-size: 0.9rem;
+        letter-spacing: 0.08em;
+      }
 
-/* BOOK BUTTON */
-.btn-book {
-  background: #246faf;
-  border: none;
-  padding: 6px 20px;
-  border-radius: 40px;
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-}
+      /* BOOK BUTTON */
+      .btn-book {
+        background: #246faf;
+        border: none;
+        padding: 6px 20px;
+        border-radius: 40px;
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+      }
 
-.btn-book:hover {
-  background: #1c5a8c;
-}
+      .btn-book:hover {
+        background: #1c5a8c;
+      }
 
-/* HERO FULLSCREEN */
-.hero {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
+      /* HERO FULLSCREEN */
+      .hero {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+      }
 
-/* SLIDE SFONDO */
-.hero-slide {
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
+      /* SLIDE SFONDO */
+      .hero-slide {
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+      }
 
-/* OVERLAY SFUMATO */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0,0,0,0.35));
-  z-index: 2;
-}
+      /* OVERLAY SFUMATO */
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.35)
+        );
+        z-index: 2;
+      }
 
-/* TESTO CENTRALE */
-.hero-content {
-  position: absolute;
-  z-index: 3;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 1rem;
-}
+      /* TESTO CENTRALE */
+      .hero-content {
+        position: absolute;
+        z-index: 3;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 1rem;
+      }
 
-/* SOTTOTITOLO */
-.hero-subtitle {
-  font-size: 0.8rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  opacity: 0.85;
-  margin-bottom: 1rem;
-}
+      /* SOTTOTITOLO */
+      .hero-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        opacity: 0.85;
+        margin-bottom: 1rem;
+      }
 
-/* TITOLO */
-.hero-title {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  font-size: 3rem;
-  line-height: 1.2;
-}
+      /* TITOLO */
+      .hero-title {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 1.2;
+      }
 
-/* LINEA CENTRALE */
-.hero-divider {
-  width: 1px;
-  height: 60px;
-  background: rgba(255,255,255,0.6);
-  margin: 1.5rem 0;
-}
+      /* LINEA CENTRALE */
+      .hero-divider {
+        width: 1px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.6);
+        margin: 1.5rem 0;
+      }
 
-/* BOTTONE HERO */
-.hero-btn {
-  background: #246faf;
-  border: none;
-  padding: 10px 28px;
-  border-radius: 40px;
-  color: white;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
-}
+      /* BOTTONE HERO */
+      .hero-btn {
+        background: #246faf;
+        border: none;
+        padding: 10px 28px;
+        border-radius: 40px;
+        color: white;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+      }
 
-.hero-btn:hover {
-  background: #1d5b91;
-}
+      .hero-btn:hover {
+        background: #1d5b91;
+      }
 
-/* SEZIONE LOCATION */
-.section-location {
-  background: #ffffff;
-}
+      /* SEZIONE LOCATION */
+      .section-location {
+        background: #ffffff;
+      }
 
-/* IMMAGINI PICCOLE IN ALTO */
-.location-top-left {
-    max-width: 55%;
-    margin-left: 10%;  
-}
+      /* IMMAGINI PICCOLE IN ALTO */
+      .location-top-left {
+        max-width: 55%;
+        margin-left: 10%;
+      }
 
-.location-top-right {
-  max-width: 75%;
-  margin-top: 35px;
-}
+      .location-top-right {
+        max-width: 75%;
+        margin-top: 35px;
+      }
 
+      /* IMMAGINE GRANDE SINISTRA */
+      .location-big-left {
+        max-width: 85%;
+        margin-top: -20px; /* identico al mockup */
+      }
 
-/* IMMAGINE GRANDE SINISTRA */
-.location-big-left {
-  max-width: 85%;
-  margin-top: -20px; /* identico al mockup */
-}
+      /* IMMAGINE IN BASSO A DESTRA */
+      .location-bottom-right {
+        max-width: 70%;
+        margin-top: -20px; /* identica distanza dal testo */
+      }
 
-/* IMMAGINE IN BASSO A DESTRA */
-.location-bottom-right {
-  max-width: 70%;
-  margin-top: -20px; /* identica distanza dal testo */
-}
+      /* TESTI */
+      .loc-label {
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.78rem;
+        color: #246faf;
+        margin-bottom: 1rem;
+      }
 
-/* TESTI */
-.loc-label {
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.78rem;
-  color: #246faf;
-  margin-bottom: 1rem;
-}
+      .loc-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.3rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+      }
 
-.loc-title {
-  font-family: "Playfair Display", serif;
-  font-size: 2.3rem;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
-}
+      .loc-text {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        margin-bottom: 1.8rem;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-.loc-text {
-  font-size: 0.95rem;
-  line-height: 1.65;
-  margin-bottom: 1.8rem;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
+      /* SEZIONE SPIAGGIA PRIVATA */
+      .spiaggia-privata-section {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
 
-/* SEZIONE SPIAGGIA PRIVATA */
-.spiaggia-privata-section {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
+      /* IMMAGINE FULL-WIDTH */
+      .spiaggia-privata-img-wrapper {
+        width: 100%;
+        height: 450px; /* come nel mockup */
+        overflow: hidden;
+      }
 
-/* IMMAGINE FULL-WIDTH */
-.spiaggia-privata-img-wrapper {
-  width: 100%;
-  height: 450px; /* come nel mockup */
-  overflow: hidden;
-}
+      .spiaggia-privata-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-.spiaggia-privata-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+      /* OVERLAY PER TESTO */
+      .spiaggia-privata-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+      }
 
-/* OVERLAY PER TESTO */
-.spiaggia-privata-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.40);
-  z-index: 1;
-}
+      /* CONTENUTO TESTO */
+      .spiaggia-privata-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+        text-align: center;
+        color: white;
+        z-index: 2;
+      }
 
-/* CONTENUTO TESTO */
-.spiaggia-privata-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -45%);
-  text-align: center;
-  color: white;
-  z-index: 2;
-}
+      /* LABEL */
+      .spiaggia-label {
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        opacity: 0.8;
+      }
 
-/* LABEL */
-.spiaggia-label {
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
-  opacity: 0.8;
-}
+      /* MARQUEE */
+      .spiaggia-marquee-wrapper {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100vw;
+        margin: 0 auto;
+      }
 
-/* MARQUEE */
-.spiaggia-marquee-wrapper {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100vw;
-  margin: 0 auto;
-}
+      .spiaggia-marquee-inner {
+        display: inline-block;
+        padding-left: 100%;
+        animation: spiaggia-marquee 18s linear infinite;
+        font-family: 'Playfair Display', serif;
+        font-size: 3.2rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
 
-.spiaggia-marquee-inner {
-  display: inline-block;
-  padding-left: 100%;
-  animation: spiaggia-marquee 18s linear infinite;
-  font-family: "Playfair Display", serif;
-  font-size: 3.2rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
+      .spiaggia-marquee-inner span {
+        margin-right: 3rem;
+        color: white;
+      }
 
-.spiaggia-marquee-inner span {
-  margin-right: 3rem;
-  color: white;
-}
+      @keyframes spiaggia-marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
 
-@keyframes spiaggia-marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
+      /* LABEL SEZIONE */
+      .section-label {
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.78rem;
+        color: #246faf;
+        margin-bottom: 1rem;
+      }
 
+      /* TITOLO */
+      .section-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+      }
 
-/* LABEL SEZIONE */
-.section-label {
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.78rem;
-  color: #246faf;
-  margin-bottom: 1rem;
-}
+      /* PARAGRAFO */
+      .section-text {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        margin-bottom: 1.8rem;
+        max-width: 90%;
+      }
 
-/* TITOLO */
-.section-title {
-  font-family: "Playfair Display", serif;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
-}
+      @media (min-width: 768px) {
+        .bar-restaurant-section .col-md-6,
+        .attivita-section .col-md-6 {
+          padding: 0 30px;
+        }
+      }
 
-/* PARAGRAFO */
-.section-text {
-  font-size: 0.95rem;
-  line-height: 1.65;
-  margin-bottom: 1.8rem;
-  max-width: 90%;
-}
+      /* SEZIONE MATRIMONI (PARALLAX) */
+      .matrimoni-section {
+        position: relative;
+        width: 100%;
+        height: 420px;
+        overflow: hidden;
+      }
 
-@media (min-width: 768px) {
-  .bar-restaurant-section .col-md-6,
-  .attivita-section .col-md-6 {
-    padding: 0 30px;
-  }
-}
+      /* wrapper immagine */
+      .matrimoni-parallax {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
 
+      /* immagine di sfondo con parallax */
+      .matrimoni-bg {
+        width: 100%;
+        height: 120%;
+        object-fit: cover;
+        transform: translateY(0);
+        will-change: transform;
+      }
 
+      /* overlay scuro leggero */
+      .matrimoni-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.25),
+          rgba(0, 0, 0, 0.5)
+        );
+        z-index: 1;
+      }
 
+      /* contenuto testo */
+      .matrimoni-content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        padding: 0 1rem;
+      }
 
+      .matrimoni-label {
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.78rem;
+        margin-bottom: 1rem;
+        opacity: 0.8;
+      }
 
-
-
-
-  </style>
-</head>
-<body>
-
+      .matrimoni-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.4rem;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
     <header class="header-lux">
-        <div class="container d-flex justify-content-between align-items-center py-3">
-      
-          <!-- LEFT SIDE -->
-          <div class="d-flex align-items-center gap-4">
-            <!-- HAMBURGER -->
-            <div class="hamburger">
-              <span></span>
-              <span></span>
-            </div>
-      
-            <!-- MENU -->
-            <nav class="menu-left d-none d-md-flex gap-4">
-              <a href="#">Location</a>
-              <a href="#">Spiagge</a>
-              <a href="#">Bars&Restaurants</a>
-            </nav>
+      <div
+        class="container d-flex justify-content-between align-items-center py-3"
+      >
+        <!-- LEFT SIDE -->
+        <div class="d-flex align-items-center gap-4">
+          <!-- HAMBURGER -->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
           </div>
-      
-          <!-- CENTER LOGO -->
-          <div class="logo-center">LOGO<br>CLIENTE</div>
-      
-          <!-- RIGHT SIDE -->
-          <div class="d-flex align-items-center gap-4">
-            <span class="lang">IT</span>
-      
-            <button class="btn-book">Book Now</button>
+
+          <!-- MENU -->
+          <nav class="menu-left d-none d-md-flex gap-4">
+            <a href="#">Location</a>
+            <a href="#">Spiagge</a>
+            <a href="#">Bars&Restaurants</a>
+          </nav>
+        </div>
+
+        <!-- CENTER LOGO -->
+        <div class="logo-center">LOGO<br />CLIENTE</div>
+
+        <!-- RIGHT SIDE -->
+        <div class="d-flex align-items-center gap-4">
+          <span class="lang">IT</span>
+
+          <button class="btn-book">Book Now</button>
+        </div>
+      </div>
+    </header>
+
+    <!--HERO-->
+    <section id="hero" class="hero splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <!-- SLIDE 1 -->
+          <li class="splide__slide">
+            <div
+              class="hero-slide"
+              style="background-image: url('./images/hero-1.jpeg')"
+            ></div>
+          </li>
+
+          <!-- SLIDE 2 -->
+          <li class="splide__slide">
+            <div
+              class="hero-slide"
+              style="background-image: url('./images/hero-2.jpg')"
+            ></div>
+          </li>
+
+          <!-- SLIDE 3 -->
+          <li class="splide__slide">
+            <div
+              class="hero-slide"
+              style="background-image: url('./images/hero-3.jpg')"
+            ></div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- TESTO -->
+      <div class="hero-content">
+        <span class="hero-subtitle">EXCLUSIVE BEACHES</span>
+        <h1 class="hero-title">Loren Ipsum dolor este</h1>
+
+        <div class="hero-divider"></div>
+
+        <button class="hero-btn">Explore</button>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="py-5 section-location">
+      <div class="container">
+        <!-- ROW 1 — IMMAGINI PICCOLE IN ALTO -->
+        <div class="row align-items-start mb-5">
+          <!-- TOP LEFT -->
+          <div class="col-md-4 d-flex justify-content-center">
+            <img
+              src="./images/top-left.jpg"
+              class="img-fluid rounded-4 location-top-left"
+            />
           </div>
-      
-        </div>
-      </header>
 
-      <!--HERO-->
-      <section id="hero" class="hero splide">
-        <div class="splide__track">
-          <ul class="splide__list">
-      
-            <!-- SLIDE 1 -->
-            <li class="splide__slide">
-              <div class="hero-slide" style="background-image: url('./images/hero-1.jpeg');"></div>
-            </li>
-      
-            <!-- SLIDE 2 -->
-            <li class="splide__slide">
-              <div class="hero-slide" style="background-image: url('./images/hero-2.jpg');"></div>
-            </li>
-      
-            <!-- SLIDE 3 -->
-            <li class="splide__slide">
-              <div class="hero-slide" style="background-image: url('./images/hero-3.jpg');"></div>
-            </li>
-      
-          </ul>
-        </div>
-      
-        <!-- TESTO -->
-        <div class="hero-content">
-          <span class="hero-subtitle">EXCLUSIVE BEACHES</span>
-          <h1 class="hero-title">Loren Ipsum dolor este</h1>
-      
-          <div class="hero-divider"></div>
-      
-          <button class="hero-btn">Explore</button>
-        </div>
-      </section>
+          <!-- EMPTY CENTER -->
+          <div class="col-md-4"></div>
 
-      <!-- LOCATION -->
-      <section class="py-5 section-location">
-
-        <div class="container">
-      
-          <!-- ROW 1 — IMMAGINI PICCOLE IN ALTO -->
-          <div class="row align-items-start mb-5">
-      
-            <!-- TOP LEFT -->
-            <div class="col-md-4 d-flex justify-content-center">
-                <img src="./images/top-left.jpg" class="img-fluid rounded-4 location-top-left">
-              </div>
-      
-            <!-- EMPTY CENTER -->
-            <div class="col-md-4"></div>
-      
-            <!-- TOP RIGHT -->
-            <div class="col-md-4 d-flex justify-content-end">
-              <img src="./images/top-right.jpg" class="img-fluid rounded-4 location-top-right">
-            </div>
-      
-          </div>
-      
-          <!-- ROW 2 — IMMAGINE GRANDE + TESTO + SPAZIO DESTRO -->
-          <div class="row align-items-center mb-5">
-      
-            <!-- IMG BIG LEFT -->
-            <div class="col-md-4">
-              <img src="./images/left-big.jpg" class="img-fluid rounded-4 location-big-left">
-            </div>
-      
-            <!-- TEXT CENTER -->
-            <div class="col-md-4 text-center px-4">
-      
-              <p class="loc-label">LOCATION</p>
-      
-              <h2 class="loc-title">Recta dolor<br>e sinte dexer</h2>
-      
-              <p class="loc-text">
-                Lorem ipsum dolor sit amet consectetur. Sed cras et volutpat sed tempus sed
-                semper pellentesque. Vivamus eleifend amet eu pharetra. Semper felis
-                scelerisque nulla amet nunc est molestie mauris tempor. Sit auctor dictum
-                pulvinar.
-              </p>
-      
-              <button class="hero-btn mt-2">Explore</button>
-      
-            </div>
-      
-            <!-- EMPTY RIGHT COLUMN -->
-            <div class="col-md-4"></div>
-      
-          </div>
-      
-          <!-- ROW 3 — IMG BASSA A DESTRA -->
-          <div class="row mt-4">
-      
-            <div class="col-md-4 offset-md-6 d-flex justify-content-end">
-              <img src="./images/bottom-right.jpg" class="img-fluid rounded-4 location-bottom-right">
-            </div>
-      
-          </div>
-      
-        </div>
-      
-      </section>
-      
-
-      <!-- SPIAGGE -->
-      <section class="spiaggia-privata-section">
-
-        <!-- IMMAGINE FULLWIDTH -->
-        <div class="spiaggia-privata-img-wrapper">
-          <img 
-            src="./images/spiaggia-privata.jpeg"
-            srcset="./images/spiaggia-privata.jpeg 640w, ./images/spiaggia-privata.jpeg 1280w, ./images/spiaggia-privata.jpeg 1920w"
-            sizes="100vw"
-            class="spiaggia-privata-img">
-        </div>
-      
-        <!-- OVERLAY + TESTO -->
-        <div class="spiaggia-privata-content">
-      
-          <p class="spiaggia-label">LE NOSTRE SPIAGGE</p>
-      
-          <!-- MARQUEE DEL TITOLO -->
-          <div class="spiaggia-marquee-wrapper">
-            <div class="spiaggia-marquee-inner">
-              <span>Spiaggia Privata</span>
-              <span>Spiaggia Privata</span>
-              <span>Spiaggia Privata</span>
-              <span>Spiaggia Privata</span>
-            </div>
-          </div>
-      
-          <button class="hero-btn mt-4">Explore</button>
-      
-        </div>
-      
-      </section>
-      
-      <!-- BAR AND RESTAURANT -->
-
-      <section class="bar-restaurant-section py-5">
-        <div class="container">
-          <div class="row align-items-center mb-5">
-      
-            <!-- IMG SINISTRA -->
-            <div class="col-md-6 mb-4 mb-md-0">
-              <img 
-                src="./images/bar-restaurant.jpg"
-                srcset="./images/bar-restaurant.jpg 640w, ./images/bar-restaurant.jpg 1024w"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                class="img-fluid rounded-4 shadow-sm">
-            </div>
-      
-            <!-- TESTO DESTRA -->
-            <div class="col-md-6 px-md-5">
-      
-              <p class="section-label">BAR & RESTAURANT</p>
-      
-              <h2 class="section-title">E dicter lorus<br> sinder tecte rset</h2>
-      
-              <p class="section-text">
-                Lorem ipsum dolor sit amet consectetur. Purus eu suspendisse consequat et tincidunt 
-                tristique risus. Fames tristique ridiculus varius scelerisque a malesuada venenatis. 
-                Laoreet mollis magna blandit etiam. Elementum id velit.
-              </p>
-      
-              <button class="hero-btn mt-3">Explore</button>
-      
-            </div>
-      
+          <!-- TOP RIGHT -->
+          <div class="col-md-4 d-flex justify-content-end">
+            <img
+              src="./images/top-right.jpg"
+              class="img-fluid rounded-4 location-top-right"
+            />
           </div>
         </div>
-      </section>
-      
-      
-      <!-- SEZIONE ATTIVITÀ (pattern inverso) -->
-      <section class="attivita-section py-5">
-        <div class="container">
-          <div class="row align-items-center">
-      
-            <!-- TESTO SINISTRA -->
-            <div class="col-md-6 order-2 order-md-1 px-md-5">
-      
-              <p class="section-label">ATTIVITÀ</p>
-      
-              <h2 class="section-title">E ritme spterm<br> linker e diter</h2>
-      
-              <p class="section-text">
-                Lorem ipsum dolor sit amet consectetur. Turpis nibh elementum feugiat et 
-                fermentum est nibh. Adipiscing sapien viverra at amet diam nullam sit 
-                fermentum. Neque est ac pharetra dui vestibulum mattis euismod. Etiam 
-                fringilla laoreet.
-              </p>
-      
-              <button class="hero-btn mt-3">Explore</button>
-      
-            </div>
-      
-            <!-- IMG DESTRA -->
-            <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
-              <img 
-                src="./images/attivita.jpg"
-                srcset="./images/attivita.jpg 640w, ./images/attivita.jpg 1024w"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                class="img-fluid rounded-4 shadow-sm">
-            </div>
-      
+
+        <!-- ROW 2 — IMMAGINE GRANDE + TESTO + SPAZIO DESTRO -->
+        <div class="row align-items-center mb-5">
+          <!-- IMG BIG LEFT -->
+          <div class="col-md-4">
+            <img
+              src="./images/left-big.jpg"
+              class="img-fluid rounded-4 location-big-left"
+            />
+          </div>
+
+          <!-- TEXT CENTER -->
+          <div class="col-md-4 text-center px-4">
+            <p class="loc-label">LOCATION</p>
+
+            <h2 class="loc-title">Recta dolor<br />e sinte dexer</h2>
+
+            <p class="loc-text">
+              Lorem ipsum dolor sit amet consectetur. Sed cras et volutpat sed
+              tempus sed semper pellentesque. Vivamus eleifend amet eu pharetra.
+              Semper felis scelerisque nulla amet nunc est molestie mauris
+              tempor. Sit auctor dictum pulvinar.
+            </p>
+
+            <button class="hero-btn mt-2">Explore</button>
+          </div>
+
+          <!-- EMPTY RIGHT COLUMN -->
+          <div class="col-md-4"></div>
+        </div>
+
+        <!-- ROW 3 — IMG BASSA A DESTRA -->
+        <div class="row mt-4">
+          <div class="col-md-4 offset-md-6 d-flex justify-content-end">
+            <img
+              src="./images/bottom-right.jpg"
+              class="img-fluid rounded-4 location-bottom-right"
+            />
           </div>
         </div>
-      </section>
-      
-      
-      
-      
+      </div>
+    </section>
 
+    <!-- SPIAGGE -->
+    <section class="spiaggia-privata-section">
+      <!-- IMMAGINE FULLWIDTH -->
+      <div class="spiaggia-privata-img-wrapper">
+        <img
+          src="./images/spiaggia-privata.jpeg"
+          srcset="
+            ./images/spiaggia-privata.jpeg  640w,
+            ./images/spiaggia-privata.jpeg 1280w,
+            ./images/spiaggia-privata.jpeg 1920w
+          "
+          sizes="100vw"
+          class="spiaggia-privata-img"
+        />
+      </div>
 
-  <!-- Splide JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+      <!-- OVERLAY + TESTO -->
+      <div class="spiaggia-privata-content">
+        <p class="spiaggia-label">LE NOSTRE SPIAGGE</p>
 
-  <script>
+        <!-- MARQUEE DEL TITOLO -->
+        <div class="spiaggia-marquee-wrapper">
+          <div class="spiaggia-marquee-inner">
+            <span>Spiaggia Privata</span>
+            <span>Spiaggia Privata</span>
+            <span>Spiaggia Privata</span>
+            <span>Spiaggia Privata</span>
+          </div>
+        </div>
 
-    //hero
-   document.addEventListener("DOMContentLoaded", () => {
-  new Splide('.splide', {
-    type: 'fade',
-    rewind: true,
-    autoplay: true,
-    interval: 5000,
-    speed: 1000,
-    arrows: false,
-    pagination: false
-  }).mount();
-});
+        <button class="hero-btn mt-4">Explore</button>
+      </div>
+    </section>
 
-  </script>
-</body>
+    <!-- BAR AND RESTAURANT -->
+
+    <section class="bar-restaurant-section py-5">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <!-- IMG SINISTRA -->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img
+              src="./images/bar-restaurant.jpg"
+              srcset="
+                ./images/bar-restaurant.jpg  640w,
+                ./images/bar-restaurant.jpg 1024w
+              "
+              sizes="(max-width: 768px) 100vw, 50vw"
+              class="img-fluid rounded-4 shadow-sm"
+            />
+          </div>
+
+          <!-- TESTO DESTRA -->
+          <div class="col-md-6 px-md-5">
+            <p class="section-label">BAR & RESTAURANT</p>
+
+            <h2 class="section-title">
+              E dicter lorus<br />
+              sinder tecte rset
+            </h2>
+
+            <p class="section-text">
+              Lorem ipsum dolor sit amet consectetur. Purus eu suspendisse
+              consequat et tincidunt tristique risus. Fames tristique ridiculus
+              varius scelerisque a malesuada venenatis. Laoreet mollis magna
+              blandit etiam. Elementum id velit.
+            </p>
+
+            <button class="hero-btn mt-3">Explore</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE ATTIVITÀ (pattern inverso) -->
+    <section class="attivita-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- TESTO SINISTRA -->
+          <div class="col-md-6 order-2 order-md-1 px-md-5">
+            <p class="section-label">ATTIVITÀ</p>
+
+            <h2 class="section-title">
+              E ritme spterm<br />
+              linker e diter
+            </h2>
+
+            <p class="section-text">
+              Lorem ipsum dolor sit amet consectetur. Turpis nibh elementum
+              feugiat et fermentum est nibh. Adipiscing sapien viverra at amet
+              diam nullam sit fermentum. Neque est ac pharetra dui vestibulum
+              mattis euismod. Etiam fringilla laoreet.
+            </p>
+
+            <button class="hero-btn mt-3">Explore</button>
+          </div>
+
+          <!-- IMG DESTRA -->
+          <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+            <img
+              src="./images/attivita.jpg"
+              srcset="./images/attivita.jpg 640w, ./images/attivita.jpg 1024w"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              class="img-fluid rounded-4 shadow-sm"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="matrimoni" class="matrimoni-section">
+      <!-- wrapper parallax con IMG (così possiamo usare srcset/sizes) -->
+      <div class="matrimoni-parallax">
+        <img
+          src="./images/matrimoni.jpeg"
+          alt="Coppia che cammina sulla spiaggia al tramonto"
+          class="matrimoni-bg"
+          srcset="
+            ./images/matrimoni.jpeg  640w,
+            ./images/matrimoni.jpeg 1280w,
+            ./images/matrimoni.jpeg 1920w
+          "
+          sizes="100vw"
+        />
+      </div>
+
+      <!-- overlay + contenuto -->
+      <div class="matrimoni-overlay"></div>
+
+      <div class="matrimoni-content text-center">
+        <p class="matrimoni-label">WEDDING</p>
+        <h2 class="matrimoni-title">Pacchetti Matrimoniali</h2>
+        <button class="hero-btn mt-3">Explore</button>
+      </div>
+    </section>
+
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script>
+      //hero
+      document.addEventListener('DOMContentLoaded', () => {
+        new Splide('.splide', {
+          type: 'fade',
+          rewind: true,
+          autoplay: true,
+          interval: 5000,
+          speed: 1000,
+          arrows: false,
+          pagination: false,
+        }).mount();
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Splide hero
+        new Splide('.splide', {
+          type: 'fade',
+          rewind: true,
+          autoplay: true,
+          interval: 5000,
+          speed: 1600,
+          arrows: false,
+          pagination: false,
+        }).mount();
+
+        // Parallax Matrimoni
+        const matrimoniSection = document.querySelector('.matrimoni-section');
+        const matrimoniImg = document.querySelector('.matrimoni-bg');
+
+        function handleParallax() {
+          if (!matrimoniSection || !matrimoniImg) return;
+          const rect = matrimoniSection.getBoundingClientRect();
+
+          const offset = rect.top * 0.3;
+          matrimoniImg.style.transform = `translateY(${offset}px)`;
+        }
+
+        window.addEventListener('scroll', handleParallax);
+        handleParallax();
+      });
+    </script>
+  </body>
 </html>

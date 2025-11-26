@@ -1,56 +1,120 @@
-.offerte-title {
+.offerte-title{
     font-family:'Playfair Display', serif;
+    font-size:2rem;
     font-weight:600;
-    font-size:2.6rem;
+    margin-bottom:1rem;
   }
   
-  .offerte-subtitle {
-    max-width:650px;
-    margin:0 auto 2rem auto;
-    font-size:.95rem;
-    line-height:1.6;
+  .offerte-subtitle{
+    margin: 0 auto;
+    text-align: center;
   }
   
-  /* CARD */
+  .offerte-header {
+    overflow: visible;
+    position: relative;
+    z-index: 10;
+  }
+  
   .offerta-card {
-    position:relative;
-    height:350px;
-    border-radius:12px;
-    overflow:hidden;
+    position: relative;
+    height: 380px;
+    border-radius: 14px;
+    overflow: hidden;
   }
   
   .offerta-img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   
   .offerta-overlay {
-    position:absolute;
-    inset:0;
-    background:linear-gradient(to bottom, rgba(0,0,0,.15), rgba(0,0,0,.45));
-    z-index:1;
-  }
-  
-  .offerta-content {
-    position:absolute;
-    bottom:25px;
-    left:50%;
-    transform:translateX(-50%);
-    color:white;
-    text-align:center;
-    z-index:2;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.28),
+      rgba(0,0,0,0.55)
+    );
+    z-index: 1;
   }
   
   .offer-badge {
-    text-transform:uppercase;
-    font-size:.75rem;
-    opacity:.9;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    opacity: 0.95;
+    z-index: 3;
+    color: white;
   }
   
-  .offer-title {
-    font-family:'Playfair Display', serif;
-    font-size:1.6rem;
-    margin-bottom:1rem;
+  .offer-title-b {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', serif;
+    font-size:2rem;
+    font-weight: 500;
+    color: white;
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .offerta-btn {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #246faf;
+    padding: 7px 32px;
+    border-radius: 40px;
+    color: white;
+    font-size: 0.85rem;
+    border: none;
+    z-index: 3;
+  }
+  
+  /* MOBILE */
+  .offerte-mobile-btn{
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+  
+    .offerte-title {
+      font-size: 1.9rem;
+      margin-bottom: 0.8rem;
+    }
+  
+    .offerte-subtitle {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      max-width: 90%;
+      margin: 0 auto 1.8rem auto;
+      color: #333;
+    }
+  
+    .offerte-mobile-btn {
+      background: #246faf;
+      padding: 10px 34px;
+      border-radius: 40px;
+      color: white;
+      font-size: 0.9rem;
+      border: none;
+      display: block;
+      width: fit-content;
+      margin: 0 auto 2.5rem auto;
+    }
+  
+    .offerta-card {
+      display: none !important;
+    }
   }
   

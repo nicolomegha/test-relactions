@@ -2,62 +2,186 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-  }
-  
-  /* Immagine */
-  .spiaggia-privata-img-wrapper {
+    padding: 0;
+}
+
+
+.spiaggia-privata-img-wrapper {
     width: 100%;
-    height: 450px;
+    height: 720px;
     overflow: hidden;
-  }
-  
-  .spiaggia-privata-img {
+}
+
+.spiaggia-privata-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+    transform: scale(1.02);
+
+}
+
+
+.spiaggia-privata-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.40));
+    z-index: 1;
+}
+
+
+.spiaggia-privata-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+
+.spiaggia-privata-label {
+    font-size: .78rem;
+    letter-spacing: .22em;
+    margin-bottom: 1.4rem;
+    opacity: 0.85;
+}
+
+
+.spiaggia-btn {
+    margin-top: 1.7rem;
+    padding: 10px 34px;
+    border-radius: 40px;
+    background: #246faf;
+    color: white;
+    font-size: .9rem;
+    border: none;
+    letter-spacing: .04em;
+}
+
+
+.spiaggia-marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    top: -10px;
+
+}
+
+.spiaggia-marquee-inner {
+    display: inline-block;
+    padding-left: 100%;
+    animation: spiaggia-marquee 18s linear infinite;
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+
+    font-weight: 600;
+    opacity: 0.95;
+}
+
+.spiaggia-marquee-inner span {
+    margin-right: 6rem;
+
+}
+
+@keyframes spiaggia-marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .spiaggia-privata-section {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
   
-  /* Overlay */
-  .spiaggia-privata-section::before {
-    content:'';
-    position:absolute;
-    inset:0;
-    background: rgba(0,0,0,0.4);
-    z-index:1;
-  }
+    .spiaggia-privata-img-wrapper {
+      width: 100%;
+      height: 340px !important;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
   
-  /* Contenuto */
-  .spiaggia-privata-content {
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -45%);
-    color:white;
-    text-align:center;
-    z-index:2;
-  }
+    .spiaggia-privata-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   
-  /* Marquee */
-  .spiaggia-marquee-wrapper {
-    overflow:hidden;
-    white-space:nowrap;
-  }
+    .spiaggia-privata-section::before {
+      content:'';
+      position:absolute;
+      inset:0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+      z-index: 2;
+    }
   
-  .spiaggia-marquee-inner {
-    display:inline-block;
-    padding-left:100%;
-    animation:spiaggia-marquee 18s linear infinite;
-    font-family:'Playfair Display', serif;
-    font-size:3.2rem;
-    font-weight:600;
-  }
+    .spiaggia-privata-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -45%);
+      width: 100%;
+      padding: 0 18px;
+      text-align: center;
+      z-index: 30;
+    }
   
-  .spiaggia-marquee-inner span {
-    margin-right:3rem;
-  }
+    .spiaggia-marquee-wrapper {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 35;
+      margin-bottom: 6px;
+    }
   
-  @keyframes spiaggia-marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-100%); }
+    .spiaggia-marquee-inner {
+      font-size: 1.55rem;
+      font-weight: 600;
+      white-space: nowrap;
+      color: white;
+    }
+  
+    .spiaggia-label {
+      font-size: 0.68rem;
+      letter-spacing: .18em;
+      color: white;
+      margin-bottom: 6px;
+    }
+  
+    .spiaggia-privata-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.95rem;
+      color: white;
+      margin-bottom: 10px;
+      z-index: 40;
+    }
+  
+    .spiaggia-btn {
+      background: #246faf !important;
+      padding: 8px 22px;
+      border-radius: 40px;
+      color: white;
+      font-size: 0.78rem;
+      border: none;
+      display: inline-block;
+      margin-top: 10px;
+      z-index: 45;
+      position: relative;
+    }
   }
   

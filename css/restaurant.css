@@ -1,26 +1,93 @@
 .section-label {
     text-transform: uppercase;
     letter-spacing: .18em;
-    font-size:.78rem;
+    font-size:.8rem;
     color:#246faf;
+    margin-bottom:.7rem;
   }
   
   .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 600;
+    font-family:'Playfair Display', serif;
+    font-size:2rem;
+    font-weight:600;
+    margin-bottom:1rem;
   }
   
   .section-text {
-    font-size: .95rem;
-    line-height: 1.65;
-    max-width: 90%;
+    font-size:.97rem;
+    line-height:1.7;
+    max-width:90%;
+    margin-bottom:1.6rem;
   }
   
-  @media (min-width: 768px) {
+  .bar-restaurant-section img,
+  .attivita-section img {
+    max-width:78%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+  }
+  
+  .bar-restaurant-section .col-md-6,
+  .attivita-section .col-md-6 {
+    padding-left:2.2rem;
+    padding-right:2.2rem;
+  }
+  
+  .button-ra {
+    background:#246faf;
+    padding:12px 38px;
+    border:none;
+    border-radius:40px;
+    color:white;
+    font-size:.95rem;
+    letter-spacing:.03em;
+    display:inline-block;
+    margin-top:18px;
+  }
+  
+  /* Desktop */
+  @media (min-width:992px){
+    .bar-restaurant-section img,
+    .attivita-section img {
+      max-width:70%;
+    }
+    .section-title {
+      font-size:2.2rem;
+    }
+    .section-text {
+      max-width:82%;
+    }
+  }
+  
+
+  @media (max-width:991px){
+    .bar-restaurant-section img,
+    .attivita-section img {
+      max-width:88%;
+    }
+  }
+  
+ 
+  @media (max-width:768px){
+    .bar-restaurant-section img,
+    .attivita-section img {
+      max-width:100%;
+    }
+    .section-title {
+      font-size:1.75rem;
+    }
+    .section-text {
+      max-width:100%;
+    }
     .bar-restaurant-section .col-md-6,
     .attivita-section .col-md-6 {
-      padding: 0 30px;
+      padding-left:1.2rem;
+      padding-right:1.2rem;
+    }
+    .button-ra {
+      padding:11px 34px;
+      font-size:.9rem;
     }
   }
   

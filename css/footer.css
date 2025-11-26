@@ -1,0 +1,47 @@
+.footer-section {
+    border-top:1px solid #d3d7dc;
+    background:#fff;
+    padding-bottom:60px;
+  }
+  
+  /* Colonne */
+  .footer-column {
+    position:relative;
+    padding:0 30px;
+  }
+  
+  .footer-column:not(:first-child)::before {
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:1px;
+    height:100%;
+    background:#d3d7dc;
+  }
+  
+  .footer-title {
+    font-size:.82rem;
+    font-weight:600;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+  }
+  
+  .footer-list { list-style:none; padding:0; }
+  .footer-list li { margin-bottom:.45rem; }
+  
+  /* Newsletter */
+  .newsletter-input {
+    width:80%;
+    padding:6px 10px;
+    border:1px solid #c8d3dd;
+    border-radius:6px;
+  }
+  
+  /* Copy */
+  .footer-copy,
+  .footer-made {
+    font-size:.75rem;
+    color:#6b6b6b;
+  }
+  

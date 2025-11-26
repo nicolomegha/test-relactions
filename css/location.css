@@ -1,0 +1,31 @@
+.section-location { background: #fff; }
+
+/* Immagini */
+.location-top-left { max-width: 55%; margin-left: 10%; }
+.location-top-right { max-width: 75%; margin-top: 35px; }
+.location-big-left { max-width: 85%; margin-top: -20px; }
+.location-bottom-right { max-width: 70%; margin-top: -20px; }
+
+/* Testi */
+.loc-label {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .78rem;
+  color: #246faf;
+  margin-bottom: 1rem;
+}
+
+.loc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.loc-text {
+  font-size: .95rem;
+  line-height: 1.65;
+  margin-bottom: 1.8rem;
+  max-width: 90%;
+  margin-inline: auto;
+}

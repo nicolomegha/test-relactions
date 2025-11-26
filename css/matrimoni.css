@@ -1,0 +1,50 @@
+.matrimoni-section {
+    position:relative;
+    width:100%;
+    height:420px;
+    overflow:hidden;
+  }
+  
+  .matrimoni-parallax {
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+  }
+  
+  .matrimoni-bg {
+    width:100%;
+    height:120%;
+    object-fit:cover;
+    will-change:transform;
+  }
+  
+  .matrimoni-overlay {
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.5));
+    z-index:1;
+  }
+  
+  .matrimoni-content {
+    position:relative;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    z-index:2;
+  }
+  
+  .matrimoni-label {
+    text-transform:uppercase;
+    font-size:.78rem;
+    opacity:.8;
+  }
+  
+  .matrimoni-title {
+    font-family:'Playfair Display', serif;
+    font-size:2.4rem;
+    font-weight:600;
+  }
+  
